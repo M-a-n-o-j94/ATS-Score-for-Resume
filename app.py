@@ -4,10 +4,11 @@ load_dotenv()  # setup local environment
 import streamlit as st
 import google.generativeai as genai
 from pypdf import PdfReader
+import os
 
 # Initialize Google Generative AI API
-userdata = {"Manoj-Api-Key": "AIzaSyBjJxDK8AkeCfb1HuN2SWbxBRX2geiAJo8"}
-google_api = userdata.get("Manoj-Api-Key")
+
+google_api = os.getenv("Manoj-Api-Key")
 genai.configure(api_key=google_api)
 model = genai.GenerativeModel("gemini-pro")
 

@@ -30,6 +30,8 @@ def read_analyse(resume, job_description):
     
     Compare it with the following job description:
     Job description: {job_description}
+    Analyze the resume based on both skills and relevant experience for the role. Consider the job description's focus areas like programming languages, technical expertise, and industry experience.
+    Calculate an ATS score between 0 and 100 based on how well the candidate's resume matches the job description.
     
     Calculate an ATS (Applicant Tracking System) score between 0 and 100, where a higher score indicates a better match.
     Provide suggestions on how the resume can be improved to better match the job description.

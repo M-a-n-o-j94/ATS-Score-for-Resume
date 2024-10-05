@@ -37,6 +37,8 @@ def read_analyse(resume, job_description):
     Please return the ATS score and the feedback in the following format:
     - ATS Score: [score]
     - Suggestions for improvement: [suggestions]
+    - what key words and skills are matching
+    - what key words and skills are not matching 
     '''
     
     # Generate the response from Google Generative AI

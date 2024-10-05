@@ -45,6 +45,45 @@ def read_analyse(resume, job_description):
     response = model.generate_content(prompt)
     return response.text
 
+
+# Inject custom CSS for background and color styling
+st.markdown(
+    """
+    <style>
+    /* Set a background gradient */
+    .stApp {
+        background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
+        background-attachment: fixed;
+    }
+
+    /* Change font color and size for headers */
+    .stApp h1 {
+        color: #ff6f61;
+    }
+    .stApp h2 {
+        color: #ff6f61;
+    }
+    
+    /* Add custom button styling */
+    .stButton button {
+        background-color: #ff6f61;
+        color: white;
+        border-radius: 12px;
+        border: 2px solid #ff6f61;
+        transition: 0.3s;
+    }
+    .stButton button:hover {
+        background-color: #fff;
+        color: #ff6f61;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
+
 # Streamlit App UI
 st.title("Resume Analyzer")
 st.subheader("Upload your resume and job description")
